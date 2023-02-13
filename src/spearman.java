@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class spearman {
+public class spearman extends Person{
+
+
 }

@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public class marksman {
+public class marksman extends Person{
+    Integer bullet;
+
+    Integer accuracy;
+
+
 }
