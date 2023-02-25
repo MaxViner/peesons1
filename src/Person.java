@@ -1,27 +1,25 @@
-import java.util.Random;
-
 public class Person implements game_interfuck {
 
 
-    String name_of_class;
+  protected   String name_of_class;
      String name;
-     Integer hit_points; // здоровье
+    protected Integer hit_points; // здоровье
 
-   Integer Endurance; // выносливость
+  protected Integer Endurance; // выносливость
 
-    Integer Parrying; //возможность уклониться от урона
+  protected   Integer Parrying; //возможность уклониться от урона
 
-    Integer  Type_of_damage; //тип урона 1-фиг 0-маг
+   protected Integer  Type_of_damage; //тип урона 1-фиг 0-маг
 
-    Integer damage; // наносимый урон
+ private    Integer damage; // наносимый урон
 
 
-    Integer Ph_Immunity; // физ_защита=снижение физического урона
+   protected Integer Ph_Immunity; // физ_защита=снижение физического урона
 
-   Integer M_Immunity; // маг_защита=снижение маг-го урона
-
+ protected   Integer M_Immunity; // маг_защита=снижение маг-го урона
+protected Integer speed; // скорость
     public Person(String name_of_class, String name ,Integer hit_points,Integer Endurance, Integer Parryng, Integer type_of_damage,Integer damage,
-                  Integer ph_Immunity, Integer M_imm){
+                  Integer ph_Immunity, Integer M_imm,Integer speed){
         this.name_of_class=name_of_class;
         this.name=name;
         this.hit_points = hit_points;
@@ -31,7 +29,9 @@ public class Person implements game_interfuck {
         this.damage=damage;
         this.Ph_Immunity=ph_Immunity;
         this.M_Immunity=M_imm;
+        this.speed=speed;
     }
+
 
 
 
@@ -62,12 +62,19 @@ public class Person implements game_interfuck {
                                         " защита от магии = %d \n"
                 ,name_of_class,Type_of_damage,damage, hit_points,Endurance,Parrying,Ph_Immunity,M_Immunity));
      }
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getHP(){
+        return hit_points;
+    }
 
 
 
     @Override
-    public void get_info() {
-        System.out.println("я - "+name_of_class+" меня звать "+name);
+    public String get_info() {
+        return ("я - "+name_of_class+" меня звать "+name);
     }
 }
 

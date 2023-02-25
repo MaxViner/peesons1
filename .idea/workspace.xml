@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfd8eff2-9052-4cf5-9ad0-ac84d7d00341" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Names.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dog_fiters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game_interfuck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/magic_unit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/range_attakers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farmer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -17,8 +12,12 @@
       <change beforePath="$PROJECT_DIR$/src/Priest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Priest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/arrrowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arrrowman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bandit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bandit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dog_fiters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dog_fiters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game_interfuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game_interfuck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/magic_unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/magic_unit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/marksman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marksman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/range_attakers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/range_attakers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spearman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
