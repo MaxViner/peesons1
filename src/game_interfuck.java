@@ -1,5 +1,9 @@
+import java.util.ArrayList;
+
 public interface game_interfuck {
 
-    void step();
+
     String get_info();
+
+    void step(ArrayList<Person> team1, ArrayList<Person> team2);
 }

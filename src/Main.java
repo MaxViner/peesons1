@@ -15,16 +15,16 @@ public class Main {
             int val = rand.nextInt(4);
             switch (val) {
                 case 0:
-                    team1.add(new marksman(get_name()));
+                    team1.add(new marksman(get_name(),val,1));
                     break;
                 case 1:
-                    team1.add(new Farmer(get_name()));
+                    team1.add(new Farmer(get_name(),val,2,true));
                     break;
                 case 2:
-                    team1.add(new mag(get_name()));
+                    team1.add(new mag(get_name(),10,10));
                     break;
                 case 3:
-                    team1.add(new bandit(get_name()));
+                    team1.add(new bandit(get_name(),9,9));
                     break;
                 default:
                     // teams.add(new BaseHero());
@@ -34,23 +34,23 @@ public class Main {
         }
         /** Создать в основной программе два списка. */
         /** Во втором крестьянин, копейщик, арбалетчик, монах */
-        System.out.println("Вторая команда:");
+
 
 
         for (int i = 0; i < 10; i++) {
             int val = rand.nextInt(4);
             switch (val) {
                 case 0:
-                    team2.add(new arrrowman(get_name()));
+                    team2.add(new arrrowman(get_name(),1,val));
                     break;
                 case 1:
-                    team2.add(new Farmer(get_name()));
+                    team2.add(new Farmer(get_name(),10,val,false));
                     break;
                 case 2:
-                    team2.add(new Priest(get_name()));
+                    team2.add(new Priest(get_name(),1,1));
                     break;
                 case 3:
-                    team2.add(new spearman(get_name()));
+                    team2.add(new spearman(get_name(),1,1));
                     break;
                 default:
                   System.out.println("something wrong");
@@ -77,8 +77,11 @@ public class Main {
         compare_all.forEach(n -> System.out.print( n.get_info()+ " скорость " + n.getSpeed() + " здоровье " + n.getHP() + ", \n"));
 
 
-        bandit pet=new bandit("jo") ;
+        arrrowman pet=new arrrowman("jo",5,5) ;
         pet.get_info();
+        mag jo = new mag("op",8,8);
+
+
     }
 
 

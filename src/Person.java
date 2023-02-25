@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+
 public class Person implements game_interfuck {
 
-
+  protected  int x,y;
+  protected boolean team;
   protected   String name_of_class;
      String name;
     protected Integer hit_points; // здоровье
@@ -18,8 +21,9 @@ public class Person implements game_interfuck {
 
  protected   Integer M_Immunity; // маг_защита=снижение маг-го урона
 protected Integer speed; // скорость
-    public Person(String name_of_class, String name ,Integer hit_points,Integer Endurance, Integer Parryng, Integer type_of_damage,Integer damage,
-                  Integer ph_Immunity, Integer M_imm,Integer speed){
+    public Person(String name_of_class, String name ,Integer hit_points,Integer Endurance,
+                  Integer Parryng, Integer type_of_damage,Integer damage,
+                  Integer ph_Immunity, Integer M_imm,Integer speed, int x, int y,boolean team){
         this.name_of_class=name_of_class;
         this.name=name;
         this.hit_points = hit_points;
@@ -30,25 +34,32 @@ protected Integer speed; // скорость
         this.Ph_Immunity=ph_Immunity;
         this.M_Immunity=M_imm;
         this.speed=speed;
+        this.x=x;
+        this.y=y;
+        this.team=team;
     }
 
 
 
 
     // урон_хп до __тип урона____защита__хп до___ вероятность парирования
-    Integer go_damage(Integer damage,Integer before_hp, Integer resist, Integer parrying){
-        int hp_after = before_hp+resist - damage * (1 - parrying);
-        return hp_after;
+    public Integer go_damage(Integer damage,Integer hit_points, Integer parrying){
+        if (this.hit_points - damage > 0) {
+            this.hit_points = this.hit_points - damage * (1 - parrying);
+        }
+
+        return hit_points;
+    }
+    public void giveDamage(Person target) {
+
+        target.hit_points=hit_points-damage;
     }
     Integer incr_Edurance(Integer Edurance_before,Integer expenses ){
         Integer Ed_after=Edurance_before-expenses;
         return Ed_after;
     }
 
-    @Override
-    public void step() {
 
-    }
 
     void get_all_info(){
         System.out.println(name_of_class);
@@ -76,9 +87,11 @@ protected Integer speed; // скорость
     public String get_info() {
         return ("я - "+name_of_class+" меня звать "+name);
     }
+
+    @Override
+    public void step(ArrayList<Person> team1, ArrayList<Person> team2){};
+
 }
-
-
 
 
 //    Доработать дерево классов так, чтобы экземпляры классов создавались конструктором с именем в параметре а остальные параметры инициализировали сами в зависимости от персонажа.
