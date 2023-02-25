@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public interface game_interfuck {
+public interface game_interfuck {
+
+    void step();
+    void  get_info();
 }
