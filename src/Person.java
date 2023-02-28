@@ -10,36 +10,40 @@ public class Person implements game_interfuck {
 
   protected Integer Endurance; // выносливость
 
-  protected   Integer Parrying; //возможность уклониться от урона
+  protected   double Parrying; //возможность уклониться от урона
 
    protected Integer  Type_of_damage; //тип урона 1-фиг 0-маг
 
- private    Integer damage; // наносимый урон
+ protected     Integer damage; // наносимый урон
 
 public String state;
    protected Integer Ph_Immunity; // физ_защита=снижение физического урона
-
+protected int max_hp;
  protected   Integer M_Immunity; // маг_защита=снижение маг-го урона
 protected Integer speed; // скорость
     public Person(String name_of_class,
                   String name ,
                   Integer hit_points,
-                  Integer Endurance,
-                  Integer Parryng,
-                  Integer type_of_damage,
                   Integer damage,
+                  Integer type_of_damage,
+                  Integer Endurance,
+
+                  double Parrying,
+
+
                   Integer ph_Immunity,
                   Integer M_imm,
                   Integer speed,
                   int x, int y,
                   boolean team,
-                  String state){
+                  String state,
+    int max_hp){
         this.name_of_class=name_of_class;
         this.name=name;
         this.hit_points = hit_points;
         this.Endurance = Endurance;
-        this.Parrying = Parryng;
-        this.Type_of_damage = type_of_damage;
+        this.Parrying = Parrying;
+        this.Type_of_damage =  type_of_damage;
         this.damage=damage;
         this.Ph_Immunity=ph_Immunity;
         this.M_Immunity=M_imm;
@@ -48,15 +52,24 @@ protected Integer speed; // скорость
         this.y=y;
         this.team=team;
         this.state=state;
+        this.max_hp=max_hp;
     }
 
 static String Alive="живаЯ";
 
 
     // урон_хп до __тип урона____защита__хп до___ вероятность парирования
-    public Integer go_damage(Integer damage,Integer hit_points, Integer parrying){
+    public Integer go_damage(Integer damage,Integer hit_points, double parrying, Integer resist){
         if (hit_points - damage > 0) {
-            damage=damage - parrying;
+            double chance_parring = Math.random();
+            if (chance_parring > parrying) {
+
+//           Если выбрашено число попадающее вероятность отражения-урон парируется
+                hit_points = hit_points - (damage + resist);
+            }
+            else {
+                System.out.println("урон не прошел");
+            }
             hit_points = hit_points - damage;
             System.out.println("нанесено "+damage+"урона");
         }

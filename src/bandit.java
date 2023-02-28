@@ -1,9 +1,12 @@
 public class bandit extends dog_fiters{
-    public bandit(String name_of_class,String name, Integer hit_points, Integer Endurance, Integer Parryng,
-                  Integer type_of_damage, Integer damage, Integer ph_Immunity, Integer M_imm, Integer speed,
-                  int x, int y, boolean team, String state) {
-        super(name_of_class,name, hit_points, Endurance, Parryng,
-                type_of_damage, damage, ph_Immunity, M_imm,speed, x,y, team,  state);
+    public bandit(String name_of_class,String name, Integer hit_points, Integer Endurance,
+                  Integer type_of_damage,double Parryng,
+                   Integer damage, Integer ph_Immunity, Integer M_imm, Integer speed,
+                  int x, int y, boolean team, String state, int max_hp) {
+        super(name_of_class,name, hit_points,
+                Endurance,damage, type_of_damage,
+                 Parryng, ph_Immunity,
+                M_imm, speed, x, y, team, state,max_hp);
     }
 
 
@@ -16,14 +19,15 @@ public class bandit extends dog_fiters{
                 140,
                 1,
                 200,
-                35,
+                0.35,
                 60,
                 10,
                 99999,
                 x,
                 y,
                 true,
-                Alive);
+                Alive,
+                1000);
         super.name=name;
         this.x=x;
         this.y=y;

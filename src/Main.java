@@ -22,7 +22,7 @@ public class Main {
                     team1.add(new Farmer(get_name(),rand.nextInt(0,100),rand.nextInt(0,50),true));
                     break;
                 case 2:
-                    team1.add(new mag(get_name(),10,10));
+                    team1.add(new Priest(get_name(),10,10));
                     break;
                 case 3:
                     team1.add(new bandit(get_name(),9,9));
@@ -52,7 +52,7 @@ public class Main {
 
                     break;
                 case 2:
-                    team2.add(new Priest(get_name(),1,1));
+                    team2.add(new mag(get_name(),1,1));
                     break;
                 case 3:
                     team2.add(new spearman(get_name(),1,1));
@@ -91,7 +91,11 @@ public class Main {
         arrrowman pet=new arrrowman("Стася",5,5) ;
         pet.get_info();
         mag jo = new mag("op",8,8);
+        Priest st=new Priest("stais",4,6);
+
         pet.step((ArrayList<Person>) team1, (ArrayList<Person>) team2);
+        jo.step((ArrayList<Person>) team1, (ArrayList<Person>) team2);
+        st.step((ArrayList<Person>) team1, (ArrayList<Person>) team2);
 
     }
 

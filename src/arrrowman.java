@@ -4,10 +4,10 @@ public class arrrowman extends range_attakers{
 
     public arrrowman(String name_class,String name,Integer Type_of_damage,Integer damage, Integer hit_point,Integer Endurance,
                     Integer Parrying,Integer Ph_Immunity,Integer M_Immunity, Integer bullet, Integer accuracy,Integer speed,
-                     int x, int y,boolean team,String state)
+                     int x, int y,boolean team,String state,int max_hp)
     {
         super(name_class,name,damage,hit_point,Endurance,Parrying,Ph_Immunity,M_Immunity,Type_of_damage,
-                bullet,accuracy,speed,x,y, team,state);
+                bullet,accuracy,speed,x,y, team,state,max_hp);
     }
 
     String team_name;
@@ -15,7 +15,7 @@ public class arrrowman extends range_attakers{
 
     public arrrowman(String name,int x,int y){
         super("арбалетор",name,250,100,1,150,
-                5,20,20,30,72,55,x,y,true,Alive);
+                5,20,20,30,72,55,x,y,true,Alive,250);
         super.name=name;
         this.x=x;
         this.y=y;
@@ -43,7 +43,7 @@ public class arrrowman extends range_attakers{
                         temp = distanceToEnemy;
                     }
                 }
-                team2.get(nearIndex).hit_points = go_damage(100 ,team2.get(nearIndex).hit_points, team2.get(nearIndex).Ph_Immunity);
+                team2.get(nearIndex).hit_points = go_damage(100 ,team2.get(nearIndex).hit_points,team2.get(nearIndex).Parrying, team2.get(nearIndex).Ph_Immunity );
                 System.out.println("bang! шмальнула по "+team2.get(nearIndex).name_of_class+" по имени "+ team2.get(nearIndex).name
                 +" ее хп- "+team2.get(nearIndex).hit_points);
                 bullet = bullet - 1;

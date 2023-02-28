@@ -10,8 +10,8 @@ public class range_attakers extends Person{
     public range_attakers(String class_name,String name, Integer hitPoints, Integer damage, Integer type_of_damage,
                           Integer endurance, Integer parrying,
                           Integer phImmunity, Integer mImmunity, Integer bullet, Integer accuracy, Integer speed,
-                            int x, int y,boolean team,String state) {
-        super(class_name,name,hitPoints,damage,endurance,parrying,type_of_damage,phImmunity,mImmunity,speed,x,y,team,state);
+                            int x, int y,boolean team,String state, int max_hp) {
+        super(class_name,name,hitPoints,damage,endurance,parrying,type_of_damage,phImmunity,mImmunity,speed,x,y,team,state,max_hp);
         this.bullet=bullet;
         this.accuracy=accuracy;
         this.Type_of_damage=1;
