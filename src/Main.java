@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
 
+
         Random rand = new Random();
         List<Person> team1 = new ArrayList<>();
         List<Person> team2 = new ArrayList<>();
@@ -15,10 +16,10 @@ public class Main {
             int val = rand.nextInt(4);
             switch (val) {
                 case 0:
-                    team1.add(new marksman(get_name(),val,1));
+                    team1.add(new marksman(get_name(),rand.nextInt(0,100),rand.nextInt(0,50)));
                     break;
                 case 1:
-                    team1.add(new Farmer(get_name(),val,2,true));
+                    team1.add(new Farmer(get_name(),rand.nextInt(0,100),rand.nextInt(0,50),true));
                     break;
                 case 2:
                     team1.add(new mag(get_name(),10,10));
@@ -34,8 +35,11 @@ public class Main {
         }
         /** Создать в основной программе два списка. */
         /** Во втором крестьянин, копейщик, арбалетчик, монах */
-
-
+        System.out.println("<<<___TEAM1___>>>");
+        for (int i = 0; i < 10; i++) {
+            System.out.println(team1.get(i).get_info());
+        }
+        System.out.println("\n\n\n");
 
         for (int i = 0; i < 10; i++) {
             int val = rand.nextInt(4);
@@ -45,6 +49,7 @@ public class Main {
                     break;
                 case 1:
                     team2.add(new Farmer(get_name(),10,val,false));
+
                     break;
                 case 2:
                     team2.add(new Priest(get_name(),1,1));
@@ -58,6 +63,12 @@ public class Main {
             }
 
         }
+
+        System.out.println("<<<___TEAM2___>>>");
+        for (int i = 0; i < 10; i++) {
+            System.out.println(team2.get(i).get_info());
+        }
+        System.out.println("\n\n\n");
 
         List<Person> compare_all = new ArrayList<>();
         compare_all.addAll(team1);
@@ -77,10 +88,10 @@ public class Main {
         compare_all.forEach(n -> System.out.print( n.get_info()+ " скорость " + n.getSpeed() + " здоровье " + n.getHP() + ", \n"));
 
 
-        arrrowman pet=new arrrowman("jo",5,5) ;
+        arrrowman pet=new arrrowman("Стася",5,5) ;
         pet.get_info();
         mag jo = new mag("op",8,8);
-
+        pet.step((ArrayList<Person>) team1, (ArrayList<Person>) team2);
 
     }
 

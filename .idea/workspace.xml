@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfd8eff2-9052-4cf5-9ad0-ac84d7d00341" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pointer2d.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farmer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -14,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/src/arrrowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arrrowman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bandit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bandit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dog_fiters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dog_fiters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game_interfuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game_interfuck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/magic_unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/magic_unit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/marksman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marksman.java" afterDir="false" />
@@ -53,6 +51,20 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="peesons1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

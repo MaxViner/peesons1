@@ -16,14 +16,24 @@ public class Person implements game_interfuck {
 
  private    Integer damage; // наносимый урон
 
-
+public String state;
    protected Integer Ph_Immunity; // физ_защита=снижение физического урона
 
  protected   Integer M_Immunity; // маг_защита=снижение маг-го урона
 protected Integer speed; // скорость
-    public Person(String name_of_class, String name ,Integer hit_points,Integer Endurance,
-                  Integer Parryng, Integer type_of_damage,Integer damage,
-                  Integer ph_Immunity, Integer M_imm,Integer speed, int x, int y,boolean team){
+    public Person(String name_of_class,
+                  String name ,
+                  Integer hit_points,
+                  Integer Endurance,
+                  Integer Parryng,
+                  Integer type_of_damage,
+                  Integer damage,
+                  Integer ph_Immunity,
+                  Integer M_imm,
+                  Integer speed,
+                  int x, int y,
+                  boolean team,
+                  String state){
         this.name_of_class=name_of_class;
         this.name=name;
         this.hit_points = hit_points;
@@ -37,15 +47,18 @@ protected Integer speed; // скорость
         this.x=x;
         this.y=y;
         this.team=team;
+        this.state=state;
     }
 
-
+static String Alive="живаЯ";
 
 
     // урон_хп до __тип урона____защита__хп до___ вероятность парирования
     public Integer go_damage(Integer damage,Integer hit_points, Integer parrying){
-        if (this.hit_points - damage > 0) {
-            this.hit_points = this.hit_points - damage * (1 - parrying);
+        if (hit_points - damage > 0) {
+            damage=damage - parrying;
+            hit_points = hit_points - damage;
+            System.out.println("нанесено "+damage+"урона");
         }
 
         return hit_points;

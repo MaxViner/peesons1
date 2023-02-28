@@ -3,13 +3,13 @@ public class Priest extends magic_unit{
 
     public Priest(String name_of_class,String name, Integer hit_points, Integer Endurance, Integer Parryng,
                   Integer type_of_damage, Integer damage, Integer ph_Immunity,
-                  Integer M_imm,Integer magic_energy,Integer speed, int x, int y, boolean team) {
+                  Integer M_imm,Integer magic_energy,Integer speed, int x, int y, boolean team,String state) {
         super(name_of_class,name, hit_points, Endurance, Parryng, type_of_damage, damage,
-                ph_Immunity, M_imm, magic_energy,speed, x,y, team);
+                ph_Immunity, M_imm, magic_energy,speed, x,y, team, state);
     }
     public Priest(String name, int x, int y){
         super("прист",name,250,100,0,20,0,
-                0,0,300,50, x,y, true);
+                0,0,300,50, x,y, true, "живаЯ");
         super.name=name;
     this.x=x;
     this.y=y;}
