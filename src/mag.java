@@ -18,19 +18,23 @@ public class mag extends magic_unit {
         this.y = y;
     }
 
-    Integer use_flameShot(Integer targerHP,  Integer Target_resisit, double t_parring, Integer damage) {
+    Integer use_flameShot(
+                          Integer Target_resisit,
+                          double t_parring,
+                          Integer damage)
+    {
         double chance_parring = Math.random();
-        System.out.println(t_parring);
+
         if (chance_parring > t_parring) {
-            damage=damage + Target_resisit;
+            damage=damage - Target_resisit;
 //           Если выбрашено число попадающее вероятность отражения-урон парируется
-            targerHP = targerHP - damage ;
+
         }
         else {
             System.out.println("урон не прошел");
         }
         ;
-        return targerHP;
+        return damage;
     }
 
     @Override
@@ -40,35 +44,56 @@ public class mag extends magic_unit {
         // алгоритм стрельбы только во врагов
         if (!this.team) {
             if (this.hit_points <= 0) {
-                System.out.println("Этот герой мертв");
+                System.out.println( name_of_class + " по имени " + name + " из команды 2 уже чилит");
             }
             if (this.magic_energy <= 0) {
                 System.out.println("отдохнуть бы а");
             } else {
                 /** Поиск наиболее приближённого врага */
                 double distanceToEnemy;
-                double temp;
-                temp = pointer2d.Distance(this.x, team1.get(0).x, this.y, team1.get(0).y);
+                double temp=100;
+                temp = pointer2d.Distance(this.x,
+                        this.y,
+                        team1.get(0).x,
+
+                        team2.get(0).y);
                 int nearIndex = 0;
-                for (int i = 1; i < 10; i++) {
-                    distanceToEnemy = pointer2d.Distance(this.x, team1.get(i).x, this.y, team1.get(i).y);
+                for (int i = 0; i < 10; i++) {
+                    if( team2.get(i).hit_points>0){
+
+                    distanceToEnemy = pointer2d.Distance
+                            (this.x,
+                                    this.y,
+                                    team2.get(i).x,
+
+                                    team2.get(i).y);
                     if (distanceToEnemy < temp) {
                         nearIndex = i;
                         temp = distanceToEnemy;
-                    }
+                    }}
+                    else continue;
                 }
-                System.out.println(team1.get(nearIndex).Endurance);
-                team1.get(nearIndex).hit_points = use_flameShot(
-                        team1.get(nearIndex).hit_points,
-                        team1.get(nearIndex).M_Immunity,
-                        team1.get(nearIndex).Parrying,
-                        this.damage);
-                System.out.println("bang! КАСТАНУЛА по " + team1.get(nearIndex).name_of_class + " по имени " + team1.get(nearIndex).name
-                        + " ее хп- " + team1.get(nearIndex).hit_points);
-                magic_energy -= 100;
+
+                team2.get(nearIndex).hit_points=
+                        team2.get(nearIndex).giveDamage(
+                        team2.get(nearIndex).hit_points,
+                        use_flameShot(
+                            team2.get(nearIndex).M_Immunity,
+                            team2.get(nearIndex).Parrying,
+                            this.damage),
+                        team2.get(nearIndex).max_hp);
+                System.out.println("bang! КАСТАНУЛА по " +
+                        team2.get(nearIndex).name_of_class +
+                        " по имени " + team1.get(nearIndex).name
+                        + " ее хп- " + team2.get(nearIndex).hit_points);
+                this.magic_energy -= 100;
+                team2.get(nearIndex).go_damage(team2.get(nearIndex).hit_points,
+                        team2.get(nearIndex).M_Immunity,
+                        team2.get(nearIndex).Parrying,100);
             }
         }
-
+        this.magic_energy+=20;
+System.out.println();
 
     }
 }

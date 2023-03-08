@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfd8eff2-9052-4cf5-9ad0-ac84d7d00341" name="Changes" comment="">
+    <list default="true" id="dfd8eff2-9052-4cf5-9ad0-ac84d7d00341" name="Changes" comment="add interface">
+      <change afterPath="$PROJECT_DIR$/src/AnsiColors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Farmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Farmer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Priest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Priest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/arrrowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/arrrowman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bandit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bandit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dog_fiters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dog_fiters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/magic_unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/magic_unit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/marksman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marksman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/range_attakers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/range_attakers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pointer2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pointer2d.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spearman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,9 +48,15 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/progi/java/OOP/dz1_oop/peesons1/src&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\progi\java\OOP\dz1_oop\peesons1\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -74,5 +81,20 @@
       <updated>1676088571596</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="add interface" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/bandit.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

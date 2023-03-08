@@ -38,7 +38,7 @@ public class Priest extends magic_unit{
         // алгоритм стрельбы только во врагов
         if (this.team) {
             if (this.hit_points <= 0) {
-                System.out.println("Этот герой мертв");
+                System.out.println( name_of_class + " по имени " + name + " из команды 2 уже чилит");
             }
             if (this.magic_energy <= 0) {
                 System.out.println("отдохнуть бы а");
@@ -49,12 +49,12 @@ public class Priest extends magic_unit{
                 int nearIndex = 0;
                 for (int i = 0; i < 10; i++) {
 
-                    if ( team1.get(i).hit_points<team1.get(i).max_hp) {
+                    if ( team1.get(i).hit_points<team1.get(i).max_hp && team1.get(i).hit_points!=0) {
                         nearIndex = i;
 
                     }
                 }
-                System.out.println(team1.get(nearIndex).Endurance);
+
                 team1.get(nearIndex).hit_points = get_heal(
                         team1.get(nearIndex).hit_points,
                         ((int) (Math.random()*150)),
@@ -64,6 +64,8 @@ public class Priest extends magic_unit{
                         + " ее хп- " + team1.get(nearIndex).hit_points);
                 this.magic_energy -= 100;
             }
+            magic_energy+=20;
+            System.out.println();
         }
 
 

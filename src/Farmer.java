@@ -31,12 +31,16 @@ public class Farmer extends dog_fiters {
 
     @Override
     public String get_info() {
-        return ("я - "+name_of_class+" меня звать "+name+" в команде"+ team);
+        return ("Ф  я - "+name_of_class+" меня звать "+name+" в команде"+ team);
 
     }
     @Override
     public void step(ArrayList<Person> team1, ArrayList<Person> team2) {
         System.out.println("ход делает " + name_of_class + " по имени " + name );
+        if (this.hit_points <= 0) {
+            System.out.println( name_of_class + " по имени " + name + " из команды 2 уже чилит");
+        }
+
         if (this.state==Alive){
             this.state=free;
         }

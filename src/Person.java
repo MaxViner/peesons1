@@ -33,7 +33,7 @@ protected Integer speed; // скорость
 
                   Integer ph_Immunity,
                   Integer M_imm,
-                  Integer speed,
+                  int speed,
                   int x, int y,
                   boolean team,
                   String state,
@@ -56,6 +56,7 @@ protected Integer speed; // скорость
     }
 
 static String Alive="живаЯ";
+    static String die="убитаЯ";
 
 
     // урон_хп до __тип урона____защита__хп до___ вероятность парирования
@@ -65,21 +66,36 @@ static String Alive="живаЯ";
             if (chance_parring > parrying) {
 
 //           Если выбрашено число попадающее вероятность отражения-урон парируется
-                hit_points = hit_points - (damage + resist);
+                damage=(damage - resist);
             }
             else {
                 System.out.println("урон не прошел");
             }
-            hit_points = hit_points - damage;
-            System.out.println("нанесено "+damage+"урона");
+
+
         }
 
-        return hit_points;
+        return damage;
     }
-    public void giveDamage(Person target) {
 
-        target.hit_points=hit_points-damage;
+    public int[] getCoords() {return new int[]{this.x, this.y};}
+    public Integer giveDamage(int hp_before,int damage, int target_max_hp) {
+//        if(hp_before-damage<=target_max_hp){
+//
+//            this.state=die;
+//            return 0;
+//        }
+//        else {
+            System.out.println("нанесено" + damage + " урона");
+            int hp;
+            hp = hp_before - damage;
+            return hp;
+
+
     }
+
+
+    public float getHp() { return hit_points;}
     Integer incr_Edurance(Integer Edurance_before,Integer expenses ){
         Integer Ed_after=Edurance_before-expenses;
         return Ed_after;
